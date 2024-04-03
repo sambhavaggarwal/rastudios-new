@@ -10,36 +10,33 @@ async function sharedMetaData(params) {
     // enable this for resolving opengraph image
     // metadataBase: new URL(settings.url),
     title: {
-      default:
-        settings?.title ||
-        "Stablo - Blog Template for Next.js & Sanity CMS",
-      template: "%s | Stablo"
+      default: settings?.title || "RA Studios",
+      template: "%s | Stablo",
     },
     description:
       settings?.description ||
-      "Stablo - popular open-source next.js and sanity blog template",
-    keywords: ["Next.js", "Sanity", "Tailwind CSS"],
-    authors: [{ name: "Surjith" }],
+      "Your solution to harnessing the power of AI using Cloud computing",
+    keywords: ["AI", "ML", "Cloud"],
+    authors: [{ name: "Sambhav Aggarwal" }],
     canonical: settings?.url,
     openGraph: {
       images: [
         {
           url:
-            urlForImage(settings?.openGraphImage)?.src ||
-            "/img/opengraph.jpg",
+            urlForImage(settings?.openGraphImage)?.src || "/img/opengraph.jpg",
           width: 800,
-          height: 600
-        }
-      ]
+          height: 600,
+        },
+      ],
     },
     twitter: {
       title: settings?.title || "Stablo Template",
-      card: "summary_large_image"
+      card: "summary_large_image",
     },
     robots: {
       index: true,
-      follow: true
-    }
+      follow: true,
+    },
   };
 }
 
